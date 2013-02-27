@@ -1,0 +1,11 @@
+This plugin parses anything that's between its opening and closing tags and returns URLs for images in &lt;img&gt; html tags that are found in the text.
+
+You can use 'prepend' and 'append' parameters to add something at the beginning/end of each row.
+
+Example:
+{exp:channel:entries limit="1"}
+Set OpenGraph tags using images in body
+{exp:extract_image prepend='<meta property="og:image" content="' append='" />'}
+{body}
+{/exp:extract_image}
+{/exp:channel:entries}
